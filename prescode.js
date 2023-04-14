@@ -10,6 +10,16 @@ function loadslides() {
 
 function startPresentation() {
     document.getElementById(currentSlideId.toString()).style.display = "block";
+    document.addEventListener("keydown", keyPressed, false);  
+}
+
+function keyPressed(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 37) { // 37 ArrowLeft
+        lastSlide();
+    } else if (keyCode == 39) { // 39 ArrowRight
+        nextSlide();
+    }
 }
 
 function nextSlide() {
