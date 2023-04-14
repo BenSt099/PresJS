@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,38 @@
     <script src="prescode.js"></script>
     <title>Python Presentation</title>
 </head>
-<body>
-    
-    <div class="slide">
-        <p class="heading">Introduction to Python</p>
-        <p class="subheading">A simple Approach</p>
+
+<body onload="loadslides()">
+    <div class="container">
+        <div class="slide" id="1">
+            <p class="heading">Introduction to Python</p>
+            <p class="subheading">A simple Approach</p>
+        </div>
+        <div class="slide" id="2">
+            <p class="heading">Introduction to Python2</p>
+            <p class="subheading">A simple Approach</p>
+        </div>
+        <div class="slide" id="3">
+            <p class="heading">Introduction to Python3</p>
+            <p class="subheading">A simple Approach</p>
+        </div>
+
+        <div class="slide" id="-1" style="text-align: center;display: none;">
+            <p>Ende</p>
+        </div>
+    </div>
+
+
+    <div class="controlcontainer">
+        <div class="control">
+            <button onclick="lastSlide()">◀️</button>
+            <button onclick="startPresentation()">🔼</button>
+            <button onclick="nextSlide()">▶️</button>
+        </div>
     </div>
 
 
 
-
-
-
 </body>
+
 </html>
