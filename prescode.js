@@ -2,9 +2,9 @@ var currentSlideId;
 var minSlideId;
 var maxSlideId;
 
-function loadslides() {
-    currentSlideId = Number(document.getElementById("1").id);
-    minSlideId = Number(document.getElementById("1").id);
+function loadslides() {    
+    currentSlideId = 1;
+    minSlideId = 1;
     maxSlideId = Number(document.getElementById("3").id);
 }
 
@@ -24,14 +24,17 @@ function keyPressed(e) {
 
 function nextSlide() {
     if (currentSlideId == maxSlideId) {
+        document.getElementById(currentSlideId.toString()).style.animation = "shadeaway 4s linear";
         document.getElementById(currentSlideId.toString()).style.display = "none";
         currentSlideId = -1;
         document.getElementById(currentSlideId.toString()).style.display = "block";
     } else if (currentSlideId == -1) {
         () => null;
     } else {
+        document.getElementById(currentSlideId.toString()).style.animation = "shadeaway 2s linear";
         document.getElementById(currentSlideId.toString()).style.display = "none";
         currentSlideId = currentSlideId + 1;
+        document.getElementById(currentSlideId.toString()).style.animation="shadenow 2s linear";
         document.getElementById(currentSlideId.toString()).style.display = "block";
     }
 }

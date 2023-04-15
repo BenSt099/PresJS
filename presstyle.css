@@ -20,6 +20,7 @@ html {
     height: 300px;
     width: 50%;
     display: none;
+    animation-iteration-count: 1;
 }
 
 .heading {
@@ -42,7 +43,7 @@ html {
     border-radius: 6px;
     height: 30px;
     width: 300px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(237, 237, 237);
     margin: auto;
 }
 
@@ -56,4 +57,24 @@ html {
     padding: 6px 40px;
     background-color: rgb(194, 194, 194);
     border-radius: 6px;
+}
+
+@keyframes shadeaway {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes shadenow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
