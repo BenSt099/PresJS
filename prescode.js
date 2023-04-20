@@ -2,11 +2,39 @@ var currentSlideId;
 var minSlideId;
 var maxSlideId;
 
-function loadslides() {    
+function loadslides() {
     currentSlideId = 1;
     minSlideId = 1;
     maxSlideId = Number(document.getElementById("3").id);
-    document.addEventListener("keydown", keyPressed, false);  
+    enableKeyListener();
+}
+
+function darkMode() {
+    document.body.style.backgroundColor = "rgb(57, 57, 57)";
+}
+
+function lightMode() {
+    document.body.style.backgroundColor = "white";
+}
+
+function increaseSize() {
+    
+}
+
+function decreaseSize() {
+    /*let slides = document.querySelector('.slide');
+    let widthslides = slides.clientWidth;
+    let heightslides = slides.clientHeight;
+    widthslides += 10;
+    document.getElementsByClassName(".slide").style.width = widthslides;*/
+}
+
+function enableKeyListener() {
+    document.addEventListener("keydown", keyPressed, false);
+}
+
+function disableKeyListener() {
+    document.removeEventListener("keydown", keyPressed);
 }
 
 function startPresentation() {
@@ -19,7 +47,7 @@ function keyPressed(e) {
         lastSlide();
     } else if (keyCode == 39) { // 39 ArrowRight
         nextSlide();
-    } else if(keyCode = 38) { // 38 ArrowUp
+    } else if (keyCode = 38) { // 38 ArrowUp
         startPresentation();
     }
 }
@@ -36,7 +64,7 @@ function nextSlide() {
         document.getElementById(currentSlideId.toString()).style.animation = "shadeaway 2s linear";
         document.getElementById(currentSlideId.toString()).style.display = "none";
         currentSlideId = currentSlideId + 1;
-        document.getElementById(currentSlideId.toString()).style.animation="shadenow 2s linear";
+        document.getElementById(currentSlideId.toString()).style.animation = "shadenow 2s linear";
         document.getElementById(currentSlideId.toString()).style.display = "block";
     }
 }

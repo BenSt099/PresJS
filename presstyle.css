@@ -11,6 +11,10 @@ html {
     height: 100%;
 }
 
+button {
+    cursor: pointer;
+}
+
 .centering {
     text-align: center;
 }
@@ -48,6 +52,9 @@ html {
 }
 
 .formula {
+    background-color: rgb(158, 174, 232);
+    border-radius: 6px;
+    padding: 5px;
     font-family: 'Courier New', monospace;
     font-weight: bold;
 }
@@ -55,7 +62,7 @@ html {
 .controlcontainer {
     border-radius: 6px;
     height: 30px;
-    width: 300px;
+    width: 320px;
     border: 1px solid rgb(237, 237, 237);
     margin: auto;
     margin-top: 20px
