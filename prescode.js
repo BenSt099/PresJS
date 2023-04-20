@@ -6,11 +6,11 @@ function loadslides() {
     currentSlideId = 1;
     minSlideId = 1;
     maxSlideId = Number(document.getElementById("3").id);
+    document.addEventListener("keydown", keyPressed, false);  
 }
 
 function startPresentation() {
     document.getElementById(currentSlideId.toString()).style.display = "block";
-    document.addEventListener("keydown", keyPressed, false);  
 }
 
 function keyPressed(e) {
@@ -19,6 +19,8 @@ function keyPressed(e) {
         lastSlide();
     } else if (keyCode == 39) { // 39 ArrowRight
         nextSlide();
+    } else if(keyCode = 38) { // 38 ArrowUp
+        startPresentation();
     }
 }
 
