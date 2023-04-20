@@ -59,6 +59,23 @@ button {
     font-weight: bold;
 }
 
+.codecontainer {
+    text-align: left;
+    background-color: rgb(178, 214, 221);
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.i1 {
+    text-indent: 2em;
+}
+
+.i2 {
+    text-indent: 4em;
+}
+
 .controlcontainer {
     border-radius: 6px;
     height: 30px;

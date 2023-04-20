@@ -42,7 +42,7 @@ function startPresentation() {
 }
 
 function keyPressed(e) {
-    var keyCode = e.keyCode;
+    var keyCode = e.which;
     if (keyCode == 37) { // 37 ArrowLeft
         lastSlide();
     } else if (keyCode == 39) { // 39 ArrowRight
