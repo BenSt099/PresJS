@@ -1,12 +1,24 @@
 var currentSlideId;
 var minSlideId;
 var maxSlideId;
+var slideswidth;
+var slidesheight;
 
 function loadslides() {
     currentSlideId = 1;
     minSlideId = 1;
     maxSlideId = Number(document.getElementById("3").id);
+    setSlidesSize(50, 300);
     enableKeyListener();
+}
+
+function setSlidesSize(w, h) {
+    slideswidth = w;
+    slidesheight = h;
+    for (id = 1; id <= maxSlideId; id++) {
+        document.getElementById(id).style.width = slideswidth + "%";
+        document.getElementById(id).style.height = slidesheight + "px";
+    }
 }
 
 function darkMode() {
@@ -18,15 +30,19 @@ function lightMode() {
 }
 
 function increaseSize() {
-    
+    for (id = 1; id <= maxSlideId; id++) {
+        slidesheight += 40;
+        slideswidth += 10;
+        setSlidesSize(slideswidth, slidesheight);
+    }
 }
 
 function decreaseSize() {
-    /*let slides = document.querySelector('.slide');
-    let widthslides = slides.clientWidth;
-    let heightslides = slides.clientHeight;
-    widthslides += 10;
-    document.getElementsByClassName(".slide").style.width = widthslides;*/
+    for (id = 1; id <= maxSlideId; id++) {
+        slidesheight -= 40;
+        slideswidth -= 10;
+        setSlidesSize(slideswidth, slidesheight);
+    }
 }
 
 function enableKeyListener() {

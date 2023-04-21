@@ -97,6 +97,14 @@ button {
     border-radius: 6px;
 }
 
+.customcursor {
+    width: 6px;
+    height: 6px;
+    background-color: #890808;
+    border: 2px solid #050505;
+    border-radius: 50%;
+}
+
 @keyframes shadeaway {
     from {
         opacity: 1;
