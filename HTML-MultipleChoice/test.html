@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple-Choice-Test</title>
+</head>
+<style>
+    .question {
+        border-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 50px;
+        background-color: rgb(209, 209, 209);
+    }
+    .question:hover {
+        transform: scale(1.02);
+    }
+    .results {
+        border-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 50px;
+        background-color: rgb(179, 228, 239);
+    }
+    #button {
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(0, 133, 228);
+        padding: 10px 25px;
+    }
+    #button:hover {
+        opacity: 0.8;
+    }
+    .spans {
+        background-color: rgb(199, 150, 224);
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cryptography-js/4.1.1/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cryptography-js/4.1.1/sha256.js"></script>
+<script>
+    arr = [true, false, false];
+    var hash = cryptographyJS.SHA256("This works");
+
+    function check() {
+        for (let i = 0; i < arr.length; i++) {
+            text += cars[i] + "<br>";
+        } 
+    }
+</script>
+<body>
+    <h1 style="text-align: center;">Multiple-Choice-Test 1</h1>
+    <div class="question">
+        <h2>Question 1</h2>
+        <p>Select the fastest programming language.</p>
+        <input type="radio" id="C" name="langs" value="C">
+        <label for="C">C</label><br>
+        <input type="radio" id="css" name="langs" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="java" name="langs" value="Java">
+        <label for="java">Java</label>
+    </div>
+    <div class="question">
+        <h2>Question 2</h2>
+        <p>What is an extension of the C programming language</p>
+        <input type="checkbox" id="JavaScript" name="langs" value="JavaScript">
+        <label for="JavaScript">JavaScript</label><br>
+        <input type="checkbox" id="cpp" name="langs" value="C++">
+        <label for="cpp">C++</label><br>
+        <input type="checkbox" id="csharp" name="langs" value="C#">
+        <label for="csharp">C#</label>
+    </div>
+    <div class="question">
+        <h2>Question 3</h2>
+        <p>Determine x (2x+4 = 24)</p>
+        <label for="num"> x = </label>
+        <input type="number" id="num" name="langs">
+    </div>
+    <div class="results">
+        <h2>Results</h2>
+        <input type="button" onclick="check()" value="Check" id="button">
+        <ol>
+            <li>Question <span class="spans">True</span></li>
+            <li>Question <span class="spans">True</span></li>
+            <li>Question <span class="spans">True</span></li>
+        </ol> 
+    </div>
+</body>
+</html>
